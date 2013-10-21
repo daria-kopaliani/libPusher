@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>2C2A2348-0700-4DB6-9786-471BBE821028</string>
+	<key>IDESourceControlProjectName</key>
+	<string>libPusher</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D22A1C18-FF35-4C1B-9C5F-E4FE1F7ADEEA</key>
+		<string>https://github.com/daria-kopaliani/libPusher.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>libPusher.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D22A1C18-FF35-4C1B-9C5F-E4FE1F7ADEEA</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/daria-kopaliani/libPusher.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D22A1C18-FF35-4C1B-9C5F-E4FE1F7ADEEA</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D22A1C18-FF35-4C1B-9C5F-E4FE1F7ADEEA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Pusher</string>
+		</dict>
+	</array>
+</dict>
+</plist>
