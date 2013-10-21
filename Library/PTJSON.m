@@ -39,22 +39,38 @@ NSString *const PTJSONParserNotAvailable = @"PTJSONParserNotAvailable";
 
 - (NSData *)JSONDataFromObject:(id)object
 {
-  return [object JSONData];
+    NSData *data = nil;
+    if (object) {
+        data = [object JSONData];
+    }
+    return data;
 }
 
 - (NSString *)JSONStringFromObject:(id)object
 {
-  return [object JSONString];
+    NSString *string = nil;
+    if (object) {
+        string = [object JSONString];
+    }
+    return string;
 }
 
 - (id)objectFromJSONData:(NSData *)data
 {
-  return [data objectFromJSONData];
+    id object = nil;
+    if (data) {
+        object = [data objectFromJSONData];
+    }
+    return data;
 }
 
 - (id)objectFromJSONString:(NSString *)string
 {
-  return [string objectFromJSONString];
+    id object = nil;
+    if (string) {
+        object = [string objectFromJSONString];
+    }
+    return object;
 }
 
 @end
