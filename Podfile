@@ -1,21 +1,13 @@
-platform :ios, :deployment_target => '4.0'
+Pod::Spec.new do |s|
+  s.name         = 'libPusher'
+  s.version      = '1.5'
+  s.license      = 'MIT'
+  s.summary      = 'An Objective-C client for the Pusher.com service.'
+  s.homepage     = 'https://github.com/lukeredpath/libPusher'
+  s.author       = 'Luke Redpath'
+  s.source       = { :git => 'https://github.com/lukeredpath/libPusher.git', :tag => 'v1.5' }
+  s.source_files = 'Library/*'
 
-pod 'Reachability'
-pod 'SocketRocket', '0.2'
-
-post_install do |installer|
-  # we don't want to link static lib to the icucore dylib or it will fail to build
-  config_file_path = File.join("Pods", "Pods.xcconfig")
-  
-  File.open("config.tmp", "w") do |io|
-    io << File.read(config_file_path).gsub(/-licucore/, '')
-  end
-  
-  FileUtils.mv("config.tmp", config_file_path)
-end
-
-target :specs, :exclusive => true do
-  link_with ['Functional Specs', 'UnitTests']
-  
-  pod 'Kiwi', git: "git://github.com/allending/Kiwi.git", :download_only => true
+  s.requires_arc = true
+  s.dependency 'SocketRocket'
 end
