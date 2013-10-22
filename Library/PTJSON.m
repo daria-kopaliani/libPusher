@@ -32,49 +32,32 @@ NSString *const PTJSONParserNotAvailable = @"PTJSONParserNotAvailable";
 
 + (id)JSONKitParser
 {
-  PT_DEFINE_SHARED_INSTANCE_USING_BLOCK(^{
-    return [[self alloc] init];
-  });
+    PT_DEFINE_SHARED_INSTANCE_USING_BLOCK(^{
+        return [[self alloc] init];
+    });
 }
 
 - (NSData *)JSONDataFromObject:(id)object
 {
-    NSData *data = nil;
-    if (object) {
-        data = [object JSONData];
-    }
-    return data;
+    return (object) ? [object JSONData] : nil;
 }
 
 - (NSString *)JSONStringFromObject:(id)object
 {
-    NSString *string = nil;
-    if (object) {
-        string = [object JSONString];
-    }
-    return string;
+    return (object) ? [object JSONString] : nil;
 }
 
 - (id)objectFromJSONData:(NSData *)data
 {
-    id object = nil;
-    if (data) {
-        object = [data objectFromJSONData];
-    }
-    return data;
+    return ([data isKindOfClass:[NSData class]]) ? [data objectFromJSONData] : nil;
 }
 
 - (id)objectFromJSONString:(NSString *)string
 {
-    id object = nil;
-    if (string) {
-        object = [string objectFromJSONString];
-    }
-    return object;
+    return ([string isKindOfClass:[NSString class]]) ? [string objectFromJSONString] : nil;
 }
 
 @end
-
 
 @implementation PTNSJSONParser 
 
