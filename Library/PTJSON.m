@@ -70,22 +70,22 @@ NSString *const PTJSONParserNotAvailable = @"PTJSONParserNotAvailable";
 
 - (NSData *)JSONDataFromObject:(id)object
 {
-  return [NSJSONSerialization dataWithJSONObject:object options:0 error:nil];
+    return (object) ? [NSJSONSerialization dataWithJSONObject:object options:0 error:nil] : nil;
 }
 
 - (NSString *)JSONStringFromObject:(id)object
 {
-  return [[NSString alloc] initWithData:[self JSONDataFromObject:object] encoding:NSUTF8StringEncoding];
+    return (object) ? [[NSString alloc] initWithData:[self JSONDataFromObject:object] encoding:NSUTF8StringEncoding] : nil;
 }
 
 - (id)objectFromJSONData:(NSData *)data
 {
-  return [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+    return ([data isKindOfClass:[NSData class]]) ? [NSJSONSerialization JSONObjectWithData:data options:0 error:nil] : nil;
 }
 
 - (id)objectFromJSONString:(NSString *)string
 {
-  return [self objectFromJSONData:[string dataUsingEncoding:NSUTF8StringEncoding]];
+    return ([string isKindOfClass:[NSString class]]) ? [self objectFromJSONData:[string dataUsingEncoding:NSUTF8StringEncoding]] : nil;
 }
 
 @end
